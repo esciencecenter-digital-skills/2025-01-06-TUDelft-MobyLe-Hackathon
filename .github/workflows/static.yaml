@@ -46,8 +46,8 @@ jobs:
           mv reveal.js-master reveal.js
       - name: Generate slides
         run: | 
-          jupyter nbconvert geospatial-python.ipynb --to slides --reveal-prefix=reveal.js
-          mv geospatial-python.slides.html index.html
+          jupyter nbconvert parallel_computation_with_dask.ipynb --to slides --reveal-prefix=reveal.js
+          mv parallel_computation_with_dask.slides.html index.html
       - name: Commit presentation material
         run: |
           git rm -rf --cached .
